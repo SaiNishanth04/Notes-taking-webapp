@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="\stylesheets\editstyle.css">
+</head>
+<body>
+    <a href="/">back to home</a>
+    <form action="/edit" method="post">
+        <input id="filename" type="text" name="previous" value="<%= filename %>">
+        <input id="new" type="text" name="new" placeholder="New file name">
+        <textarea id="filecontent" name="content" rows="5" cols="30"><%= filedata %></textarea>
+        <input id="button" type="submit" placeholder="Edit" value="Save">
+    </form>
+</body>
+</html>

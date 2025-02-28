@@ -1,0 +1,130 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.textfield {
+    width: 97%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 8px;
+}
+
+textarea.block {
+    resize: none; 
+    height: 100px; 
+    
+}
+
+.block {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px; 
+    cursor: pointer;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 15px;
+    margin: 8px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.text-content{
+    display: flex;
+    gap: 10px;
+    padding-left: 15px;
+}
+
+.tasks{
+    margin-top: 15px;
+    outline: none;
+    width: 230px;
+    height: 100px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.content{
+    color: white;
+    font-size: 15px;
+    
+}
+
+#external{
+    color: #007bff;
+    text-decoration: none;
+}
+
+h3{
+    font-size: 20px;
+    color: hsl(0, 4%, 34%);
+}
+
+/* Ensure the task-actions container is using flexbox layout */
+.task-actions {
+    display: flex;
+    gap: 10px; /* Space between Edit and Delete buttons */
+    align-items: center;
+    
+    padding-bottom: 10px;
+}
+
+/* Edit button styling */
+#edit {
+    color: #9b9595;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Delete button inside the form styled like a text link */
+.delete-form {
+    display: inline; /* Ensure the form is inline */
+}
+
+.delete-form button {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: red; /* Red text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Make it appear clickable */
+    font-size: 15px;
+    padding: 0; /* Remove padding */
+}
+
+/* Change color on hover for delete */
+.delete-form button:hover {
+    color: darkred; /* Darker red on hover */
+}

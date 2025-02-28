@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="\stylesheets\style.css">
+</head>
+<body>
+    <h1>Notes Taking Webapp</h1>
+    <div class="main">
+        <div class="textfield">
+            <form action="/create" method="post">
+                <input class="block" type="text" placeholder="Enter title" name="title">
+                <textarea class="block"  placeholder="Enter description" name="details"></textarea>
+                <button type="submit">Create Task</button>
+            </form>
+        </div>
+        <div class="text-content">
+            <% if(files.length>0) { %>
+                <% files.forEach(function(val){ %>
+                    <div class="tasks">
+                        <h1 class="content"><%= val %></h1>
+                        <a id="external" href="/file/<%= val %>">readmore</a>
+                        <a id="edit" href="/edit/<%= val %>">edit</a>
+                        
+                        <form class="delete-form" action="/delete/<%= val %>" method="post" >
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <h3>No tasks.</h3>
+            <% } %>
+        
+        </div>
+        
+    </div>
+    <script src="\javascripts\script.js"></script>
+</body>
+</html>
